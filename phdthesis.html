@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>PhD Thesis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+                <section id="Intro" class="three">
+                    <div class="container">
+
+                        <header>
+                            <h2>PhD Thesis</h2>
+                        </header>
+
+                        <h3>Prediction-based Search for <br>
+                            Autonomous Game-Playing</h3>
+                        <br>
+                                                   
+                        <div class="row">               
+                            <div class="column">
+                                <p>
+                                    Alexander Dockhorn  <br>
+                                    Otto-von Otto-von-Guericke University<br>
+                                    Magdeburg, Germany<br>
+                                </p>
+                                <p>
+                                    <a title="PhD Thesis" href="https://adockhorn.github.io/files/phd_thesis.pdf" target="_blank">PhD Thesis (PDF)</a><br>
+                                    <a title="PhD Thesis Slides" href="https://adockhorn.github.io/files/slides/phd_defense.pdf" target="_blank">slides of the defense (PDF)</a><br>
+                                    submitted December 17, 2019<br>
+                                    defended June 12, 2020
+                                </p>
+                            </div>
+                            <div class="right-column" >
+                                <a href="images/alex-promotion.jpg" target="_blank">
+                                    <img class="  alignright wp-image-51" style="border: 1px solid #000000;" 
+                                    src="images/alex-promotion-thumb.jpg" width="248" height="350"></a>
+                                    <p> Graduation Ceremony, <br>Alexander Dockhorn<br></p>
+                            </div>
+                        </div>
+
+                        <h3>Abstract</h3>
+
+                        <p>Simulation-based search algorithms have been widely applied in the context of autonomous game-playing. 
+                            Their flexibility allows for the rapid development of agents that are able to achieve satisfying 
+                            performance in many problem domains. However, these algorithms share two requirements, namely, 
+                            access to a forward model and full knowledge of the environment’s state. In this thesis, simulation-based 
+                            search algorithms will be adapted to tasks in which either the forward model or the state of the 
+                            environment is unknown.</p>
+
+                        <p>To play a game without a forward model, methods for learning the environment’s model from recent 
+                            interactions between the agent and the environment are proposed. These forward model learning 
+                            techniques allow the agent to predict the outcome of its actions, and therefore, enable a 
+                            prediction-based search process. An analysis of environment models shows how they can be 
+                            represented and learned in the form of an end-to-end forward model. Based on this general approach, 
+                            three methods are proposed which reduce the number of possible models and, thus, the training time 
+                            required. The proposed forward model learning techniques are evaluated according to their applicability 
+                            to general game-learning tasks and validated based on a wide variety of games. The results show the applicability 
+                            of prediction-based search agents for games where the forward model is not accessible.</p>
+
+                        <p>In case the environment’s state cannot be fully observed by the agent and the number of possible states 
+                            is low, state determinisation methods, which uniformly sample possible states have shown to perform well. 
+                            However, if the number of states is high, the uniform state sampling approach performs worse than non-determinising 
+                            search methods due to the search process spending too much time on unlikely states. In this thesis, two methods 
+                            for predictive state determinisation are proposed. These sample probable states based on the agent’s partial 
+                            observation of the current state and a database of previously played games, which allows the agent to focus 
+                            its search process on likely states. Proposed algorithms are evaluated in terms of their prediction accuracy 
+                            and game-playing performance in the context of the collectible card game Hearthstone. Results show that the 
+                            implemented agent outperforms other state-of-the-art agents in case the replay database is representative 
+                            for the state distribution.</p>
+
+                        <h3>Code Repositories</h3>
+                        <p>
+                            <a title="Forward Model Learning" href="https://github.com/ADockhorn/ForwardModelLearningDissertation" target="_blank">Forward Model Learning</a><br>
+
+                            <a title="Predictive-State Determinization" href="https://github.com/ADockhorn/StateDeterminizationExperiments" target="_blank">Predictive-State Determinization</a><br>
+                        </p>
+
+                        <h3>Bibtex</h3>
+                        <pre>@phdthesis{Dockhorn2020,
+    author = {Dockhorn, Alexander},
+    pages = {1--231},
+    school = {Otto von Guericke University Magdeburg},
+    title = {{Prediction-based Search for 
+              Autonomous Game-Playing}},
+    year = {2020}
+}                            
+                        </pre>
+                        
+                    </div>
+                </section>
+            </div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/add_sidebar.js"></script>
+            
+	</body>
+</html>
+
+		
