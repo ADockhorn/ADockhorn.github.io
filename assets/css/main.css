@@ -274,11 +274,16 @@ input, select, textarea {
 	.bib div.abstract div, .bib div.review td, .bib div.bibtex div { background-color: #FFFFFF; border-bottom: 1px black solid; text-align: justify; }
 	.bib div.nextshow div { border-bottom: 1px gray solid; }
 
-	.bib div.bibtex pre { overflow: auto;}
+	.bib div.bibtex pre {
+		overflow: auto;
+		display: flex;
+		white-space: pre;
+	}
 
 	.bib p.infolinks { margin: 0.0em 0em 0em 0em; padding: 0px; text-align: justify; }
 	.bib p.links { margin: 0.2em 0em 0em 0em; padding: 0px; text-align: right; }
 	.bib p.footer { margin: 0.0em 0em 0em 0em; padding: 0px; text-align: center; font-size: 14px; }
+
 
 	.abstract div.noshow {
 		display: none;
@@ -2336,7 +2341,7 @@ input, select, textarea {
 			}
 
 			#main > section.three {
-				background-color: #ecf1f1;
+				background-color: #ffffff;
 			}
 
 			#main > section.four {
