@@ -168,7 +168,7 @@
    * Get a human-readable venue string from an entry.
    */
   function getVenue(entry) {
-    return entry.journal || entry.booktitle || entry.howpublished || entry.school || '';
+    return entry.journal || entry.booktitle || entry.howpublished || entry.school || entry.series || '';
   }
 
   /**
@@ -176,7 +176,8 @@
    */
   function getTypeInfo(entry) {
     var t = entry.type;
-    var customType = (entry.type_field || '').toLowerCase();
+    var customType = (entry.type_field || entry.bib_type || '').toLowerCase();
+    if (t === 'book')         return { label: 'Book',         cls: 'book' };
     if (t === 'incollection') return { label: 'Book Chapter', cls: 'book' };
     if (t === 'article')      return { label: 'Journal',      cls: 'journal' };
     if (t === 'inproceedings')return { label: 'Conference',   cls: 'conference' };

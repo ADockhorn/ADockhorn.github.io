@@ -11,7 +11,7 @@
 
   /* ── Type ordering for grouped display ─────────────────── */
   var TYPE_ORDER = [
-    { key: 'incollection', label: 'Book Chapters' },
+    { key: 'incollection', label: 'Books & Book Chapters' },
     { key: 'article',      label: 'Journal Papers' },
     { key: 'inproceedings',label: 'Conference Papers' },
     { key: 'workshop',     label: 'Workshop Papers' },
@@ -39,7 +39,7 @@
 
   function entryDisplayType(entry) {
     var t = entry.type;
-    if (t === 'incollection') return 'incollection';
+    if (t === 'incollection' || t === 'book') return 'incollection';
     if (t === 'article')      return 'article';
     if (t === 'inproceedings')return 'inproceedings';
     if (t === 'phdthesis' || t === 'mastersthesis') return 'thesis';
@@ -90,7 +90,8 @@
   function renderCard(entry) {
     var info    = BibTeXParser.getTypeInfo(entry);
     var dtype   = entryDisplayType(entry);
-    var authors = BibTeXParser.formatAuthors(entry.author || '');
+    var authors = entry.author ? BibTeXParser.formatAuthors(entry.author)
+                : (entry.editor ? BibTeXParser.formatAuthors(entry.editor) + ' (Eds.)' : '');
     var venue   = BibTeXParser.getVenue(entry);
     var year    = entry.year || '';
     var title   = entry.title || '(untitled)';
@@ -134,7 +135,7 @@
          + '<div class="pub-authors">' + authors + '</div>'
          + (venue ? '<div class="pub-venue">' + venue + '</div>' : '')
          + '<div class="pub-footer">'
-         +   '<span class="badge badge-' + dtype + '">' + info.label + '</span>'
+         +   '<span class="badge badge-' + info.cls + '">' + info.label + '</span>'
          +   noteHtml + awardHtml
          +   '<span style="flex:1"></span>'
          +   togglesHtml
